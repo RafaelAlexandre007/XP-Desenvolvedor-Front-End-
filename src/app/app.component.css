@@ -1,0 +1,12 @@
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+.container-fluid{
+    background: rgb(238, 240, 240);
+}

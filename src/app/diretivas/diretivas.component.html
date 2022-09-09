@@ -1,0 +1,22 @@
+<div>
+    <input #inputDescription type="text" name="" id="" placeholder="Descrição da tarefa">
+    <button (click)="addtask(inputDescription.value)">Add</button>
+</div>
+<button (click)="toogleShow()">Tarefas</button>
+<div *ngIf="exibir">
+    <table>
+        <tr *ngFor="let task of tasks; let i = index">
+            <ng-container *ngIf="!task.done"> <!-- Esconde as tarefas concluidas -->
+                <td><input type="checkbox" name="" id="" [checked]=" task.done"></td>
+                <td>{{ task.description}}</td>
+                <td><button (click)="deleteTask(i)">Excluir</button></td>
+            </ng-container>
+        </tr>
+    </table>
+</div>
+
+<div [ngSwitch]="tasks.length">
+    <div *ngSwitchCase="0">Nenhuma tarefa</div>
+    <div *ngSwitchCase="1">Uma tarefa</div>
+    <div *ngSwitchDefault>{{ tasks.length }} tarefas</div>
+</div>
