@@ -1,5 +1,5 @@
-Objetivo principal: Pré-requisitos
-Praticarr conceitos fundamentais sobre o desenvolvimento Front End com Angular e VUE.
+Main objective: Prerequisites
+Practice fundamental concepts about Front End development with Angular and VUE.
 
-Objetivos específicos:
-Criar e manter o Front End de sistemas com a linguagem de programação JavaScript e a ferramenta React.
+Specific objectives:
+Create and maintain the Front End of systems with the JavaScript programming language and the React tool.
