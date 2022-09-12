@@ -1,22 +1,10 @@
-<div class="container">    
-    <p>Jogador atual: {{ currentPlayer }}</p>
-    <p>Vencedor: {{ winner }}</p>
+<div class="container">
+    <p *ngIf="!winner">Jogador atual: {{ currentPlayer }}</p>
+    <p *ngIf="winner">Vencedor: {{ winner }}</p>
     <p><button (click)="reset()">Reniciar Partida</button></p>
     <table>
-        <tr>
-            <td (click)="prossesPlay(0, 0)">{{ board[0][0] }}</td>
-            <td (click)="prossesPlay(0, 1)">{{ board[0][1] }}</td>
-            <td (click)="prossesPlay(0, 2)">{{ board[0][2] }}</td>
-        </tr>
-        <tr>
-            <td (click)="prossesPlay(1, 0)">{{ board[1][0] }}</td>
-            <td (click)="prossesPlay(1, 1)">{{ board[1][1] }}</td>
-            <td (click)="prossesPlay(1, 2)">{{ board[1][2] }}</td>
-        </tr>
-        <tr>
-            <td (click)="prossesPlay(2, 0)">{{ board[2][0] }}</td>
-            <td (click)="prossesPlay(2, 1)">{{ board[2][1] }}</td>
-            <td (click)="prossesPlay(2, 2)">{{ board[2][2] }}</td>
+        <tr *ngFor="let row of [0, 1, 2]">
+            <td *ngFor="let col of [0, 1, 2]" (click)="prossesPlay(row, col)">{{ board[row][col] }}</td>
         </tr>
     </table>
 </div>
